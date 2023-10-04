@@ -1,0 +1,22 @@
+.header{
+    background-color:#A64A17;;
+    display: flex;
+    height: 3.125rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.header .logo h1{
+    color: #FFF;
+    font-family: Rantera;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.header .menu{
+    color: #fff;
+}
+.hearder .menu .list{
+    display: none;
+}

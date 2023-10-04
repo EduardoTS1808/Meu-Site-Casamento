@@ -1,0 +1,144 @@
+
+
+
+
+
+.container {
+    /* max-width: 124rem; */
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    background: url('./Rectangle\ 21.png') center/cover no-repeat;
+}
+.title-About{
+        width: auto;
+        height: 100px;
+        background-color: #fff;
+    }
+.title-About h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+
+}
+
+.heading {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.swiper_container {
+    width: 100%;
+    /* height: 22rem; */
+    padding:  0;
+    position: relative;
+}
+
+.swiper-slide {
+    width: 25rem;
+    height: 100%;
+    position: relative;
+}
+.scroll-container {
+    overflow: hidden;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    /* animation: scroll-infinite 40s linear infinite; */
+  }
+  
+  @keyframes scroll-infinite {
+    from {
+      transform: translateX(100%);
+    }
+    
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+
+@media (max-width: 500px) {
+    .swiper_container {
+        height: 100%;
+    }
+    .swiper-slide {
+        width: 17rem !important;
+        height: 100% !important;
+    }
+    .swiper-slide img {
+        width: 14rem !important;
+        height: 20rem !important;
+    }
+}
+
+
+
+
+
+.swiper-slide img {
+    width: 23rem;
+    height: 30rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+
+
+.slider-controler {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+@media (max-width: 450px) {
+    .slider-controler .swiper-button-next {
+        left: 80% !important;
+        transform: translateX(-80%) !important;
+    }
+    .slider-controler .swiper-button-prev {
+        left: 20% !important;
+        transform: translateX(-20%) !important;
+    }
+}
+.content {
+    padding: 0 1.5rem;
+    margin: 0;
+    top: 0;
+}
+
+.content h5{
+    margin: 0;
+    color: #000;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: Quesha;
+}
+
+.content p{
+    color: #000;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    z-index: 1000;
+}
+
+.content img{
+    position: absolute;
+    width: 3rem;
+    height: 12rem;
+    transform: scaleY(1.5);
+    left: 0;
+    z-index: 0;
+}
+
+
+
+
