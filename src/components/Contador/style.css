@@ -1,0 +1,24 @@
+
+.contagemDown{
+    margin: 1rem 2rem ;
+}
+.contagemDown .numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contagemDown .rectangle{
+    border-radius: .9rem;
+    display: block;
+    background: #FFF;
+    margin: 0 .2rem;
+}
+.contagemDown .rectangle p{
+    padding:  .5rem 0;
+    width: 5rem;
+    flex-shrink: 0;
+    box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, .1);
+    color: #423723;
+    font-size: 1.7rem;
+    font-weight: 800;
+}

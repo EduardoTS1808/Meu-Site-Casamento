@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: 'ranteraregular';
+    src: url('./fonts/rantera-webfont.woff2') format('woff2'),
+         url('./fonts/rantera-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'rubiks_cuberegular';
+    src: url('./fonts/quesha/rubiks_cube-webfont.woff2') format('woff2'),
+         url('./fonts/quesha/rubiks_cube-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -6,6 +6,7 @@ function MyButtonPresentiar({onClick, textoButton}) {
         background:" #712609",
         padding: "10px",
         border: "none",
+        fontSize: "1rem",
    
       };
 

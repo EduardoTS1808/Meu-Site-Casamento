@@ -1,25 +1,23 @@
-import React , {useState}    from "react";
+import React, {useState} from "react";
 import './style.css'
 
-import MyButtonConfirmar from '../../components/ButtonPresentiar/MyButton'
+import Form from "../Form/Form";
+import MyButtonPresentiar from "../ButtonPresentiar/MyButton";
 
-const Carrinho =( {dados}) => {
-    
+const Carrinho = ( {dados}) => {
     const count = dados.length;
-    let title = <h1></h1>;
-    let num =  <div>Lista vazia</div>
+    let title;
     if(count > 0){
         const noun = count > 1 ? "itens" : "item";
         title = count +  ' ' + noun;
     }
-    
-    
-    
-    const ConfirmarPresente = ()=>{
-        alert("Somos muito gratos pelo presente!!!")
-        
-    }
-  
+    const [valorInput, setValorInput] = useState({
+        name: '',
+        phone: '',
+    });
+
+    console.log(dados)
+    console.log(valorInput.name, valorInput.phone);
     return (
         <div className="contentCarrinho">
         
@@ -34,24 +32,20 @@ const Carrinho =( {dados}) => {
             <img key={image.id} src={image.src} alt="Imagem" className="imageCarrinho" />
             <p>{image.title}</p>
             
-            
+         
             </div>
             
             </>
             ))}
             </div>
-            <MyButtonConfirmar onClick={ConfirmarPresente} textoButton={"Confirmar"} />
-            <MyButtonConfirmar textoButton={"Limpar"}/>
-    
-       
-
-            
-            
-            
-            
-            
+           <Form valorInput={valorInput}  setValorInput={setValorInput} />
+          <div className="botoes">
+          <MyButtonPresentiar  textoButton={"Confirmar"}/>
+           <MyButtonPresentiar  textoButton={"Limpar"}/>
+          </div>
             </div>
             );
+          
         };
         
         

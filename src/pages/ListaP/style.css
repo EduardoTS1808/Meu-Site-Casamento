@@ -1,3 +1,4 @@
+@import '../../App-fonts.css';
 .headComponent{
   background: #712609; 
   background:hsla(17, 100%, 30%, 1);
@@ -5,16 +6,20 @@
 .headComponent h1{
   padding: 20px;
   color: #FFF;
-font-family: Rantera;
-font-size: 2.5rem;
+font-family: ranteraregular;
+font-size:2.3rem;
 font-style: normal;
 font-weight: 100;
 line-height: 98.9%; 
 }
+.iconePresente{
+  margin: 2rem;
+  padding:2rem; 
+}
+
 .Header-content{
   display: flex;
   align-items: center;
-  justify-content: start;
   margin:4px 8px;
 }
 .Header-content h3{
@@ -38,33 +43,45 @@ line-height: 98.9%;
 }
 
 .imagesCozinha .carroselItens{ 
-  margin: 15px auto;
-  padding: 17px;
-  border-radius: 0rem 0rem 0.625rem 0.625rem;
+    padding: 15px 0;
+    margin: 2px;
+    border-radius: 0rem 0rem 0.625rem 0.625rem;
     background: #FFF;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-    width: fit-content;
-    overflow: hidden;
-    display: grid;
-    align-content: space-around;
-    grid-template-columns: auto auto ;
+    width: 100%;
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;  
 
 }
 .imagesCozinha .carroselItens .card {
-  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.09);
+  box-shadow: inset 5px 10px  10px 1px rgba(210, 209, 209, 0.5);
+  border-radius: 10px;
+  padding: 5px ;
 }
 .carroselItens .card p{
+  padding-bottom: 5px;
   color: #000;
   font-family: Sarabun;
-  font-size: 13px;
+  font-size: 17px;
   font-style: normal;
 }
 .imagesCozinha .carroselItens .image {
-  height: 100px;
-  width: 120px;
-  background: rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  height: 120px; 
   object-fit: contain;
   border: none;
+  
+}
+
+@media(max-width: 430px){ 
+  .imagesCozinha .carroselItens .image{
+    width: 90px;
+  }
+  
 }
   

@@ -14,17 +14,9 @@ export default function Header(){
         <div className='header'>
 
             <div className='logo'>
-                <h1>EG</h1>
+                <h1> G & E </h1>
             </div>
-            <div className='menu'>
-                myList 
-                 {/* <ul className='list'>
-                    <li>Sobre nós</li>
-                    <li>Cerimonia</li>
-                    <li>Lista de Presentes</li>
-                    <li>Confirmar Presença</li>
-                </ul> */}
-            </div> 
+         
 
 
 
