@@ -35,7 +35,7 @@ import React from "react";
 
     return(
           <form  style={FormStyle} >
-            <label style={label}>digite seu nome</label>
+            <label style={label}>Digite seu nome</label>
             <input 
             name="nome" 
             style={input} 
@@ -43,8 +43,8 @@ import React from "react";
              type="text"
               value={valorInput.name}
                onChange={handleInputChange}
-                placeholder="digite seu nome"/>
-            <label style={label}>digite seu telefone para contato</label>
+                placeholder="Digite seu nome"/>
+            <label style={label}>Digite seu telefone para contato</label>
             <input
               name="telefone" 
               style={input}

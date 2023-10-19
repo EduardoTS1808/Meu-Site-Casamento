@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'rubiks_cuberegular';
+    font-family: 'rubiks';
     src: url('./fonts/quesha/rubiks_cube-webfont.woff2') format('woff2'),
          url('./fonts/quesha/rubiks_cube-webfont.woff') format('woff');
     font-weight: normal;

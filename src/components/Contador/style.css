@@ -9,11 +9,13 @@
 }
 .contagemDown .rectangle{
     border-radius: .9rem;
-    display: block;
     background: #FFF;
     margin: 0 .2rem;
 }
 .contagemDown .rectangle p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding:  .5rem 0;
     width: 5rem;
     flex-shrink: 0;

@@ -56,15 +56,15 @@ render() {
                         </div>              
                     <div className='rectangle'>
                         <p>{hours}</p>
-                         <p>horas</p>
+                         <p>hr</p>
                          </div>
                     <div className='rectangle'>
                         <p>{minutes}</p>
-                         <p>minutos</p>
+                         <p>min</p>
                          </div>
                     <div className='rectangle'>
                         <p>{seconds}</p>
-                         <p>segundos</p>
+                         <p>seg</p>
                          </div>
 
                 </div>

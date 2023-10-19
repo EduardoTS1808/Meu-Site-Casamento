@@ -16,14 +16,22 @@ const Carrinho = ( {dados}) => {
         phone: '',
     });
 
-    console.log(dados)
-    console.log(valorInput.name, valorInput.phone);
+    // console.log(dados)
+    // console.log(valorInput.name, valorInput.phone, dados);
+    const dadosFinais = []
+    console.log(JSON.stringify(dados))
+    JSON.stringify(dados)
+    dadosFinais.push(valorInput.name, valorInput.phone, dados.entries(title));
+    console.log(dadosFinais);
+        
+
+
     return (
-        <div className="contentCarrinho">
+        < div  className="contentCarrinho">
         
         <div className="titleCarrinho">
 
-            <h2>Confira o seu Presente, ( {count} ) </h2>
+            <h2>Confira o seu Presente ( {count} ) </h2>
         </div>
         <div className="carrinho" >
         {dados.map((image) => (
@@ -40,8 +48,9 @@ const Carrinho = ( {dados}) => {
             </div>
            <Form valorInput={valorInput}  setValorInput={setValorInput} />
           <div className="botoes">
+            {/* <input type="submit" value={"enviar"}/> */}
           <MyButtonPresentiar  textoButton={"Confirmar"}/>
-           <MyButtonPresentiar  textoButton={"Limpar"}/>
+           <MyButtonPresentiar  textoButton={"Limpar"} />
           </div>
             </div>
             );

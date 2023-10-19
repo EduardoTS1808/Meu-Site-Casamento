@@ -58,14 +58,7 @@ function App() {
     </SwiperSlide>
     
     
-    <div className="slider-controler">
-    <div className="swiper-button-prev ">
-    <ion-icon name="arrow-back-outline"></ion-icon>
-    </div>
-    <div className="swiper-button-next ">
-    <ion-icon name="arrow-forward-outline"></ion-icon>
-    </div>
-    </div>
+   
     </Swiper>
     <div className='content'>
     <h5>Minha amada Graziela</h5>

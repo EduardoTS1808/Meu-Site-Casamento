@@ -13,7 +13,10 @@ font-weight: 100;
 line-height: 98.9%; 
 }
 .iconePresente{
-  margin: 2rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding:2rem; 
 }
 
@@ -41,6 +44,12 @@ line-height: 98.9%;
   background-color: #D9D4C1;
   border-radius: 20px 0;
 }
+.imagesCozinha .botao p{
+  color: #712609;
+  font-family: Quesha;
+  font-size: 1.8rem;
+  font-style: normal;
+}
 
 .imagesCozinha .carroselItens{ 
     padding: 15px 0;
@@ -50,7 +59,6 @@ line-height: 98.9%;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
     display: flex;
-    /* display: none; */
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -58,30 +66,33 @@ line-height: 98.9%;
 
 }
 .imagesCozinha .carroselItens .card {
-  border: 2px solid rgba(0, 0, 0, 0.09);
-  box-shadow: inset 5px 10px  10px 1px rgba(210, 209, 209, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.09); 
   border-radius: 10px;
-  padding: 5px ;
+  display: grid;
+  padding: .5rem  ;
+  width: 150px;
+  margin-bottom: .5rem;
 }
 .carroselItens .card p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 5px;
   color: #000;
   font-family: Sarabun;
-  font-size: 17px;
+  font-size: 1.5rem;
   font-style: normal;
 }
 .imagesCozinha .carroselItens .image {
-  padding: 15px;
-  height: 120px; 
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  height: 10rem; 
   object-fit: contain;
   border: none;
   
 }
 
-@media(max-width: 430px){ 
-  .imagesCozinha .carroselItens .image{
-    width: 90px;
-  }
-  
-}
   

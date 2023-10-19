@@ -1,12 +1,14 @@
 import React from "react";
 function MyButtonPresentiar({onClick, textoButton}) {
     const myStyle = {
+        width: "fit-content",
+        margin: "auto",
         color: "#fff",
-        borderRadius: "10px 0px",
+        borderRadius: "1rem 0",
         background:" #712609",
-        padding: "10px",
+        padding: "1rem",
         border: "none",
-        fontSize: "1rem",
+        fontSize: "1.2rem",
    
       };
 
