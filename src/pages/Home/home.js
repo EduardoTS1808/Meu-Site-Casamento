@@ -16,7 +16,7 @@ export default function Home(){
                 <h2>Graziela e Eduardo</h2>
                 <p>03/07/24</p>
             </div>
-            <img src={ImageHome} className='imageHome'/>
+            <img src={ImageHome} alt='background' className='imageHome'/>
 
             <div className='contagem'>
                

@@ -62,7 +62,7 @@ function App() {
     </Swiper>
     <div className='content'>
     <h5>Minha amada Graziela</h5>
-    <img src={planta}/> 
+    <img src={planta} alt='planta'/> 
     <p>
     
     Hoje, neste dia especial, quero expressar todo o amor e gratidão que sinto por você. Em meio a esse turbilhão de emoções, não poderia deixar de reconhecer o quão abençoado sou por tê-la ao meu lado nesta jornada chamada vida.

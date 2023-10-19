@@ -63,7 +63,7 @@ export default function ListaP (){
                 adicionar(newItem)
                 
             }
-            const [carrim, setCarrim=[]] = useState([]);
+            const [carrim, setCarrimgti] = useState([]);
             
             const adicionar = (y) => {
                 carrim.push(y)
