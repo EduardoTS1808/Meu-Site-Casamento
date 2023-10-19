@@ -63,7 +63,8 @@ export default function ListaP (){
                 adicionar(newItem)
                 
             }
-            const [carrim, setCarrimgti] = useState([]);
+            const [carrim, setCarrim] = useState([]);
+            console.log(setCarrim)
             
             const adicionar = (y) => {
                 carrim.push(y)
@@ -87,7 +88,6 @@ export default function ListaP (){
                 
                 
                 <div className="imagesCozinha">
-                {/* <div className="botao"> <p>Cama-Mesa-Banho</p></div> */}
                 
                 <div className="carroselItens" >
                 {imagesCozinha.map((item) => (
