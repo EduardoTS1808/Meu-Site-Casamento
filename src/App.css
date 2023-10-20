@@ -3,9 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 520px
 }
 @import './App-fonts.css';
-
 
 
 
@@ -16,5 +16,10 @@
 @media(max-width: 550px){
   *{
     font-size: 50%;
+  }
+}
+@media(max-width: 200px){
+  *{
+    font-size: 40%;
   }
 }

@@ -19,7 +19,7 @@ const Carrinho = ( {dados}) => {
     // console.log(dados)
     // console.log(valorInput.name, valorInput.phone, dados);
     const dadosFinais = []
-    console.log(JSON.stringify(dados))
+    console.log(JSON.stringify(dados,{}))
     JSON.stringify(dados)
     dadosFinais.push(valorInput.name, valorInput.phone, dados.entries(title));
     console.log(dadosFinais);
