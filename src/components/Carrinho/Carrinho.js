@@ -24,6 +24,7 @@ const Carrinho = ( {dados}) => {
         dados.map(( nome)=>{
             namePresente.push(nome.title)
             console.log(nome.title)})
+            return namePresente
         }
         const handleReload = () => {
             alert("Muito obrigado, estamos ansiosos pela sua presença!")
