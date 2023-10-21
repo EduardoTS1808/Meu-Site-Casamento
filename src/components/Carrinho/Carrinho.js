@@ -21,10 +21,10 @@ const Carrinho = ( {dados}) => {
     });
     let namePresente = [];
     const titlePresent = (dados)=>{
-        dados.map(( nome)=>{
+        dados.forEach(( nome)=>{
             namePresente.push(nome.title)
             console.log(nome.title)})
-            return namePresente
+            // return namePresente
         }
         const handleReload = () => {
             alert("Muito obrigado, estamos ansiosos pela sua presença!")
