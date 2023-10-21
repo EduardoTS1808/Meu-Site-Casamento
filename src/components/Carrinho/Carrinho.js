@@ -5,33 +5,55 @@ import Form from "../Form/Form";
 import MyButtonPresentiar from "../ButtonPresentiar/MyButton";
 
 const Carrinho = ( {dados}) => {
+    const handleButtonClick = () => {
+        alert('Este botão está em desenvolvimento. Em  breve estará funcionando.  ')
+    };
+    
     const count = dados.length;
-    let title;
+    let quantidade;
     if(count > 0){
         const noun = count > 1 ? "itens" : "item";
-        title = count +  ' ' + noun;
+        quantidade = count +  ' ' + noun;
     }
     const [valorInput, setValorInput] = useState({
         name: '',
         phone: '',
     });
-
-    // console.log(dados)
-    // console.log(valorInput.name, valorInput.phone, dados);
-    const dadosFinais = []
-    console.log(JSON.stringify(dados,{}))
-    JSON.stringify(dados)
-    dadosFinais.push(valorInput.name, valorInput.phone, dados.entries(title));
-    console.log(dadosFinais);
+    let namePresente = [];
+    const titlePresent = (dados)=>{
+        dados.map(( nome)=>{
+            namePresente.push(nome.title)
+            console.log(nome.title)})
+        }
+        const handleReload = () => {
+            alert("Muito obrigado, estamos ansiosos pela sua presença!")
+            window.location.reload();
+        };
         
-
-
+        
+        
+        
+        
+        function onSubmit(event) {
+            event.preventDefault()
+            titlePresent(dados) ;
+            fetch('https://api.sheetmonkey.io/form/e3Cb86mZekusHup5r5bA2H', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify( {nome:valorInput.name, telefone:valorInput.phone, presente:namePresente})
+        }).then(handleReload)
+        
+    }
+    
     return (
         < div  className="contentCarrinho">
         
         <div className="titleCarrinho">
-
-            <h2>Confira o seu Presente ( {count} ) </h2>
+        
+        <h2>Confira o seu Presente  {quantidade}  </h2>
         </div>
         <div className="carrinho" >
         {dados.map((image) => (
@@ -40,26 +62,25 @@ const Carrinho = ( {dados}) => {
             <img key={image.id} src={image.src} alt="Imagem" className="imageCarrinho" />
             <p>{image.title}</p>
             
-         
+            
             </div>
             
             </>
             ))}
             </div>
-           <Form valorInput={valorInput}  setValorInput={setValorInput} />
-          <div className="botoes">
-            {/* <input type="submit" value={"enviar"}/> */}
-          <MyButtonPresentiar  textoButton={"Confirmar"}/>
-           <MyButtonPresentiar  textoButton={"Limpar"} />
-          </div>
+            <Form valorInput={valorInput}  setValorInput={setValorInput} />
+            <div className="botoes">
+            <MyButtonPresentiar  onClick={onSubmit}  textoButton={"Confirmar"}/>
+            <MyButtonPresentiar onClick={ handleButtonClick} textoButton={"Limpar"} />
+            </div>
             </div>
             );
-          
+            
         };
         
         
         
         export default  Carrinho 
         
-  
+        
         

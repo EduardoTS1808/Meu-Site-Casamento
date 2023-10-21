@@ -31,10 +31,12 @@ import React from "react";
         phone: e.target.value
       });
     }
+ 
 
 
     return(
           <form  style={FormStyle} >
+          
             <label style={label}>Digite seu nome</label>
             <input 
             name="nome" 

@@ -7,7 +7,7 @@
 }
 .title {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 20%;
     margin:auto;
   
@@ -31,12 +31,7 @@
 }
 
 
-.imageHome{
-    display: flex;
-    object-fit: cover;
-    width: 100%;
-    height: calc(100vh - 90px);
-}
+
 
 .contagem{
     position: relative;
@@ -55,4 +50,22 @@
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: .3rem;
+}
+
+.imageHome{
+    padding: 0 100px;
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+@media(max-width: 900px){
+    .imageHome{
+        display: flex;
+        object-fit: cover;
+        width: 100%;
+        padding: 0;
+        height: calc(100vh - 90px);
+    }
 }

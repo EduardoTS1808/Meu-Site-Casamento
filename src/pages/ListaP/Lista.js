@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
 
 import './style.css'
 
@@ -8,7 +8,6 @@ import MyButton from '../../components/ButtonPresentiar/MyButton'
 
 
 export default function ListaP (){
-    const UserContext = createContext()
     
     const imagesCozinha = [ 
         {id:4, title:'Boleira',    src:'./imagens/boleira.jpg'},
@@ -49,7 +48,7 @@ export default function ListaP (){
         {id:41, title:'Jogo Panelas Anteaderente',    src:'./imagens/kit-panelas-ante-aderente.jpg'},
         {id:42, title:'Kit Tapetes para Banheiro',    src:'./imagens/kit-tapete-banheiro-2.jpg'},
         {id:43, title:'Kit Tapetes para Cozinha',    src:'./imagens/kit-tapete-cozinha.jpg'},
-        {id:44, title:'Kit Tapetes para Cozinha-2',    src:'./imagens/kit-tapete-cozinha.jpg'},
+        {id:44, title:'Kit Tapetes para Cozinha',    src:'./imagens/kit-tapete-cozinha-2.jpg'},
         {id:45, title:'Lençol Elástico',    src:'./imagens/lencol-elastico.jpg'},
         {id:46, title:'Mop Esfregão Giratório',    src:'./imagens/mop-esfregao-giratorio.jpg'},
         {id:47, title:'Toalha de Mesa',    src:'./imagens/toalha-de-mesa.jpg'},
@@ -70,7 +69,8 @@ export default function ListaP (){
                 carrim.push(y)
                 
             }
-            
+        
+           
             
             
             
@@ -109,10 +109,8 @@ export default function ListaP (){
                     </div>
                     
                     
-                    <UserContext.Provider value={carrim}>
-                    <Carrinho dados={carrim} />
+                    <Carrinho dados={carrim}/>
                   
-                    </UserContext.Provider>
                     
                     
                     </>
