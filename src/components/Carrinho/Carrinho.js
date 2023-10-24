@@ -4,10 +4,7 @@ import './style.css'
 import Form from "../Form/Form";
 import MyButtonPresentiar from "../ButtonPresentiar/MyButton";
 
-const Carrinho = ( {dados}) => {
-    const handleButtonClick = () => {
-        alert('Este botão está em desenvolvimento. Em  breve estará funcionando.  ')
-    };
+const Carrinho = ( {dados , atualiza}) => {
     
     const count = dados.length;
     let quantidade;
@@ -24,16 +21,20 @@ const Carrinho = ( {dados}) => {
         dados.forEach(( nome)=>{
             namePresente.push(nome.title)
             console.log(nome.title)})
-            // return namePresente
         }
         const handleReload = () => {
             alert("Muito obrigado, estamos ansiosos pela sua presença!")
+            window.scrollTo({top:0, behavior: 'auto',});
             window.location.reload();
         };
         
         
         
+        const limpaCarrim = ({dados})=>{
+            atualiza(dados)
+        }
         
+   
         
         function onSubmit(event) {
             event.preventDefault()
@@ -72,7 +73,7 @@ const Carrinho = ( {dados}) => {
             <Form valorInput={valorInput}  setValorInput={setValorInput} />
             <div className="botoes">
             <MyButtonPresentiar  onClick={onSubmit}  textoButton={"Confirmar"}/>
-            <MyButtonPresentiar onClick={ handleButtonClick} textoButton={"Limpar"} />
+            <MyButtonPresentiar onClick={ limpaCarrim} textoButton={"Limpar"} />
             </div>
             </div>
             );

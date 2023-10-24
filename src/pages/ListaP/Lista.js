@@ -10,69 +10,90 @@ import MyButton from '../../components/ButtonPresentiar/MyButton'
 export default function ListaP (){
     
     const imagesCozinha = [ 
-        {id:4, title:'Boleira',    src:'./imagens/boleira.jpg'},
-        {id:5, title:'Cafeteira',    src:'./imagens/cafeteira-grafite.jpg'},
-        {id:6, title:'Colheres',    src:'./imagens/colheres-plastico.jpg'},
-        {id:7, title:'Conjunto de Xicaras',    src:'./imagens/conjunto-xicaras.jpg'},
-        {id:9, title:'Copos de Vidro',    src:'./imagens/copos.jpg'},
-        {id:11, title:'Faqueiro Completo ',    src:'./imagens/faqueiro-completo.jpg'},
-        {id:12, title:'Kit Facas ',    src:'./imagens/faqueiro-so-facas.jpg'},
-        {id:13, title:'Forma Antiaderente',    src:'./imagens/forma-bolo.jpg'},
-        {id:14, title:'Frígideiras Anteaderente ',    src:'./imagens/frigideiras.jpg'},
-        {id:15, title:'Garrafa Témica  ',    src:'./imagens/garrafa-termica-cafe.jpg'},
-        {id:16, title:'Jarra de Vidro ',    src:'./imagens/jarra-vidro.jpg'},
-        {id:17, title:'Kit Banheiro ',    src:'./imagens/kit-banheiro.jpg'},
-        {id:19, title:'Formas c/fundo Removível ',    src:'./imagens/kit-forma-bolo-fundo-removivel.jpg'},
-        {id:20, title:'Kit Leiteira ',    src:'./imagens/kit-leiteira.jpg'},
-        {id:21, title:'Porta Mantimentos ',    src:'./imagens/kit-porta-mantimentos.jpg'},
-        {id:22, title:'Toalhas Corpo e Rosto ',    src:'./imagens/kit-toalha-corpo-rosto.jpg'},
-        {id:23, title:'Kit Assadeira',    src:'./imagens/kit-travessa-inox.jpg'},
-        {id:24, title:'Kit Travessa vidro',    src:'./imagens/kit-travessa-vidro.jpg'},
-        {id:26, title:'Micro-Ondas',    src:'./imagens/microondas.jpg'},
-        {id:27, title:'Panela de Pressão',    src:'./imagens/panela-de-pressao.jpg'},
-        {id:1, title: 'Aparelho de Jantar', src:'./imagens/aparelho-de-jantar.jpg'},
-        {id:29, title:'Tabua Passar',    src:'./imagens/tabua-passar-roupa.jpg'},
-        {id:31, title:'Taças Sobremesa',    src:'./imagens/taças-sobremesa.jpg'},
-        {id:32, title:'Kit Tapetes para Banheiro',    src:'./imagens/tapete-banheiro.jpg'},
-        {id:33, title:'Panela Eletrica p/Arroz',    src:'./imagens/panela-arroz-eletrica.jpg'},
-        {id:3, title:'Rede Cadeira de Balanço',    src:'./imagens/rede-cadeira-balanco.jpg'},
-        {id:2, title:'Rede Gigante cinza',    src:'./imagens/rede-gigante.jpg'},
-        {id:30, title:'Rede Gigante bege',    src:'./imagens/rede-gigante-2.jpg'},
-        {id:34, title:'Panela de Pressão antiaderente',    src:'./imagens/panela-pressao.jpg'},
-        {id:35, title:'Colcha de Cama',    src:'./imagens/colcha-cama-queen.jpg'},
-        {id:36, title:'Escorredor Duplex Inox',    src:'./imagens/escorredor-duplex-inox.jpg'},
-        {id:37, title:'Espremedor de Frutas 1,5l',    src:'./imagens/espremedor-frutas-1,5l.jpg'},
-        {id:38, title:'Jogo de Lençol',    src:'./imagens/jogo-lencol.jpg'},
-        {id:39, title:'Kit Escorredor Inox',    src:'./imagens/kit-escorredor-inox.jpg'},
-        {id:40, title:'Jogo Lençol Fino',    src:'./imagens/kit-lencol-fino.jpg'},
-        {id:41, title:'Jogo Panelas Anteaderente',    src:'./imagens/kit-panelas-ante-aderente.jpg'},
-        {id:42, title:'Kit Tapetes para Banheiro',    src:'./imagens/kit-tapete-banheiro-2.jpg'},
-        {id:43, title:'Kit Tapetes para Cozinha',    src:'./imagens/kit-tapete-cozinha.jpg'},
-        {id:44, title:'Kit Tapetes para Cozinha',    src:'./imagens/kit-tapete-cozinha-2.jpg'},
-        {id:45, title:'Lençol Elástico',    src:'./imagens/lencol-elastico.jpg'},
-        {id:46, title:'Mop Esfregão Giratório',    src:'./imagens/mop-esfregao-giratorio.jpg'},
-        {id:47, title:'Toalha de Mesa',    src:'./imagens/toalha-de-mesa.jpg'},
-       
+        {id:4, title:'Boleira',    src:'./imagens/boleira.jpg', disponivel: true,},
+        {id:5, title:'Cafeteira',    src:'./imagens/cafeteira-grafite.jpg', disponivel: true,},
+        {id:6, title:'Colheres',    src:'./imagens/colheres-plastico.jpg', disponivel: true,},
+        {id:7, title:'Conjunto de Xicaras',    src:'./imagens/conjunto-xicaras.jpg', disponivel: true,},
+        {id:9, title:'Copos de Vidro',    src:'./imagens/copos.jpg', disponivel: true,},
+        {id:11, title:'Faqueiro Completo ',    src:'./imagens/faqueiro-completo.jpg', disponivel: true,},
+        {id:12, title:'Kit Facas ',    src:'./imagens/faqueiro-so-facas.jpg', disponivel: true,},
+        {id:13, title:'Forma Antiaderente',    src:'./imagens/forma-bolo.jpg', disponivel: true,},
+        {id:14, title:'Frígideiras Anteaderente ',    src:'./imagens/frigideiras.jpg', disponivel: true,},
+        {id:15, title:'Garrafa Témica  ',    src:'./imagens/garrafa-termica-cafe.jpg', disponivel: true,},
+        {id:16, title:'Jarra de Vidro ',    src:'./imagens/jarra-vidro.jpg', disponivel: true,},
+        {id:17, title:'Kit Banheiro ',    src:'./imagens/kit-banheiro.jpg', disponivel: true,},
+        {id:19, title:'Formas c/fundo Removível ',    src:'./imagen, disponivel: true,s/kit-forma-bolo-fundo-removivel.jpg'},
+        {id:20, title:'Kit Leiteira ',    src:'./imagens/kit-leiteira.jpg', disponivel: true,},
+        {id:21, title:'Porta Mantimentos ',    src:'./imagens/kit-porta-mantimentos.jpg', disponivel: true,},
+        {id:22, title:'Toalhas Corpo e Rosto ',    src:'./imagens/kit-toalha-corpo-rosto.jpg', disponivel: true,},
+        {id:23, title:'Kit Assadeira',    src:'./imagens/kit-travessa-inox.jpg', disponivel: true,},
+        {id:24, title:'Kit Travessa vidro',    src:'./imagens/kit-travessa-vidro.jpg', disponivel: true,},
+        {id:26, title:'Micro-Ondas',    src:'./imagens/microondas.jpg', disponivel: true,},
+        {id:27, title:'Panela de Pressão',    src:'./imagens/panela-de-pressao.jpg', disponivel: true,},
+        {id:1, title: 'Aparelho de Jantar', src:'./imagens/aparelho-de-jantar.jpg', disponivel: true,},
+        {id:29, title:'Tabua Passar',    src:'./imagens/tabua-passar-roupa.jpg', disponivel: true,},
+        {id:31, title:'Taças Sobremesa',    src:'./imagens/taças-sobremesa.jpg', disponivel: true,},
+        {id:32, title:'Kit Tapetes para Banheiro',    src:'./imagens/tapete-banheiro.jpg', disponivel: true,},
+        {id:33, title:'Panela Eletrica p/Arroz',    src:'./imagens/panela-arroz-eletrica.jpg', disponivel: true,},
+        {id:3, title:'Rede Cadeira de Balanço',    src:'./imagens/rede-cadeira-balanco.jpg', disponivel: true,},
+        {id:2, title:'Rede Gigante cinza',    src:'./imagens/rede-gigante.jpg', disponivel: true,},
+        {id:30, title:'Rede Gigante bege',    src:'./imagens/rede-gigante-2.jpg', disponivel: true,},
+        {id:34, title:'Panela de Pressão antiaderente',    src:'./imagens/panela-pressao.jpg', disponivel: true,},
+        {id:35, title:'Colcha de Cama',    src:'./imagens/colcha-cama-queen.jpg', disponivel: true,},
+        {id:36, title:'Escorredor Duplex Inox',    src:'./imagens/escorredor-duplex-inox.jpg', disponivel: true,},
+        {id:37, title:'Espremedor de Frutas 1,5l',    src:'./imagens/espremedor-frutas-1,5l.jpg', disponivel: true,},
+        {id:38, title:'Jogo de Lençol',    src:'./imagens/jogo-lencol.jpg', disponivel: true,},
+        {id:39, title:'Kit Escorredor Inox',    src:'./imagens/kit-escorredor-inox.jpg', disponivel: true,},
+        {id:40, title:'Jogo Lençol Fino',    src:'./imagens/kit-lencol-fino.jpg', disponivel: true,},
+        {id:41, title:'Jogo Panelas Anteaderente',    src:'./imagens/kit-panelas-ante-aderent, disponivel: true,e.jpg'},
+        {id:42, title:'Kit Tapetes para Banheiro',    src:'./imagens/kit-tapete-banheiro-2.jpg', disponivel: true,},
+        {id:43, title:'Kit Tapetes para Cozinha',    src:'./imagens/kit-tapete-cozinha.jpg', disponivel: true,},
+        {id:44, title:'Kit Tapetes para Cozinha',    src:'./imagens/kit-tapete-cozinha-2.jpg', disponivel: true,},
+        {id:45, title:'Lençol Elástico',    src:'./imagens/lencol-elastico.jpg', disponivel: true,},
+        {id:46, title:'Mop Esfregão Giratório',    src:'./imagens/mop-esfregao-giratorio.jpg', disponivel: true,},
+        {id:47, title:'Toalha de Mesa',    src:'./imagens/toalha-de-mesa.jpg', disponivel: true,},
+     
             ]
+
             
             const [lista, setLista] = useState(imagesCozinha);
+
+           
             
             const adicionarItem = (newItem) => {
                 setLista([...lista, newItem]);
+
                 adicionar(newItem)
+                window.scrollTo(0, 1000000)
+          
                 
             }
             const [carrim, setCarrim] = useState([]);
-            console.log(setCarrim)
             
-            const adicionar = (y) => {
-                carrim.push(y)
-                
+            const atualizaState = ()=>{
+                setCarrim([])
+             
             }
+            const adicionar = (y) => {
+                carrim.push(y);
+            }
+
+            // const updatedItens = imagesCozinha.map(item => {
+            //     if (item.id === item) {
+            //       return { ...item, disponivel: false };
+            //     }
+            //     return item;
+            // });
+            // const removeItem = (id) => {
+            //     removeItem(id)
+                
+            //     setLista(updatedItens);
+            
+            //   };
+            
         
-           
             
-            
+        
             
             return(
                 <>
@@ -93,13 +114,14 @@ export default function ListaP (){
                 {imagesCozinha.map((item) => (
                     <div className="ppp">
                     <>
-                    <div className="card">
+                    <div   className="card">
+         {item.disponivel ? 'Disponível' : 'Indisponível'} 
                     
                     <img key={item.id} src={item.src} alt="Imagem" className="image" />
                     
                     <p>{item.title}</p>
                     
-                    <MyButton  onClick={()=> adicionarItem(item) } textoButton={"Presentear"}/>
+                    <MyButton  onClick={()=> adicionarItem(item) }  textoButton={"Presentear"}/>
                     
                     </div>                                
                     </>
@@ -109,7 +131,7 @@ export default function ListaP (){
                     </div>
                     
                     
-                    <Carrinho dados={carrim}/>
+                        <Carrinho dados={carrim}  atualiza  ={ atualizaState} />
                   
                     
                     

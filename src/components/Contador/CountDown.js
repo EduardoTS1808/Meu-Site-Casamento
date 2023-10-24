@@ -4,7 +4,7 @@ class Countdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      targetDate: new Date('2024-07-03T16:30:00').getTime(),
+      targetDate: new Date('2024-07-06T16:30:00').getTime(),
       timeRemaining: 0
     };
   }

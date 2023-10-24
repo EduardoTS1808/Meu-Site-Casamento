@@ -49,18 +49,9 @@
   
   .swiper-slide {
     display: flex;
-    animation: scroll-infinite 30s linear infinite;
   }
   
-  @keyframes scroll-infinite {
-    from {
-      transform: translateX(0%);
-    }
-    
-    to {
-      transform: translateX(-100%);
-    }
-  }
+
   
 
 
