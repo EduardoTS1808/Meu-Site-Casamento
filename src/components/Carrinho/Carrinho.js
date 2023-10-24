@@ -24,8 +24,8 @@ const Carrinho = ( {dados , atualiza}) => {
         }
         const handleReload = () => {
             alert("Muito obrigado, estamos ansiosos pela sua presença!")
+            window.scrollTo({top:0, behavior: "auto"});
             window.location.reload();
-            window.scrollTo({top:100, behavior: "smooth"});
         };
         
         

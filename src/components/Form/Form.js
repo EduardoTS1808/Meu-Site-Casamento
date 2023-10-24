@@ -1,4 +1,7 @@
 import React from "react";
+import { IMaskInput} from 'react-imask';
+// import input from 'react-input-mask';
+
  export default function Form ({valorInput, setValorInput}){
     const FormStyle = {
         display: "block",
@@ -13,6 +16,7 @@ import React from "react";
         borderRadius: "10px",
         fontSize: "15px"
     }
+
     const label = {
         display: "flex",
         padding: " 0 17px",
@@ -49,16 +53,17 @@ import React from "react";
                onChange={handleInputChange}
                 placeholder="Digite seu nome"/>
             <label style={label}>Digite seu telefone para contato</label>
-            <input
+            <IMaskInput
               name="telefone" 
               style={input}
                required="true"
-                type="tel" 
-                maxlength="11" 
-                // onkeyup={handlePhone}
+                
                 value={valorInput.phone}
                  onChange={handleInputChange2}
-                  placeholder="(85) 9 1234-5678"/>
+                 mask="(00) 0 0000-0000"
+                  placeholder="digite seu telefone"
+                  />
+                 
           </form>
     )
 }

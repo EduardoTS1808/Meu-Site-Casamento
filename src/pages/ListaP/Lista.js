@@ -78,23 +78,6 @@ export default function ListaP (){
                 carrim.push(y);
             }
 
-            // const updatedItens = imagesCozinha.map(item => {
-            //     if (item.id === item) {
-            //       return { ...item, disponivel: false };
-            //     }
-            //     return item;
-            // });
-            // const removeItem = (id) => {
-            //     removeItem(id)
-                
-            //     setLista(updatedItens);
-            
-            //   };
-            
-        
-            
-        
-            
             return(
                 <>
                 <div className="headComponent">
@@ -115,7 +98,7 @@ export default function ListaP (){
                     <div className="ppp">
                     <>
                     <div   className="card">
-         {item.disponivel ? 'Disponível' : 'Indisponível'} 
+         {/* {item.disponivel ? 'Disponível' : 'Indisponível'}  */}
                     
                     <img key={item.id} src={item.src} alt="Imagem" className="image" />
                     
