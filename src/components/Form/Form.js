@@ -30,7 +30,9 @@ import React from "react";
         ...valorInput,
         phone: e.target.value
       });
+
     }
+
  
 
 
@@ -51,7 +53,9 @@ import React from "react";
               name="telefone" 
               style={input}
                required="true"
-                type="number" 
+                type="tel" 
+                maxlength="11" 
+                // onkeyup={handlePhone}
                 value={valorInput.phone}
                  onChange={handleInputChange2}
                   placeholder="(85) 9 1234-5678"/>

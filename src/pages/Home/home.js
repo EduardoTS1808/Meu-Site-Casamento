@@ -14,7 +14,7 @@ export default function Home(){
         <div className='home'>
             <div className='title'>
                 <h2>Graziela e Eduardo</h2>
-                <p>03/07/24</p>
+                <p>06/07/24</p>
             </div>
             <img src={ImageHome} alt='background' className='imageHome'/>
 
