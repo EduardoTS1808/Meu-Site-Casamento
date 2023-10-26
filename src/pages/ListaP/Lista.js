@@ -57,27 +57,37 @@ export default function ListaP (){
 
             
             const [lista, setLista] = useState(imagesCozinha);
-
            
-            
+        
+        //    const RemoveItemLista = ()=>{
+          
+        //     console.log(JSON.stringify({novaLista}))
+        //    }
+           const novaLista = [...lista]
+           const deleteItem = (deletePresente) => {
+               const novoState = lista.filter((item) => item !== deletePresente);
+               const updateList = novaLista.find(objeto => objeto.disponivel === false)
+                setLista( novoState, updateList)
+            }
+
+
+
             const adicionarItem = (newItem) => {
                 setLista([...lista, newItem]);
-
                 adicionar(newItem)
+                deleteItem(newItem)
                 window.scrollTo(0, 1000000)
-          
-                
             }
             const [carrim, setCarrim] = useState([]);
             
             const atualizaState = ()=>{
                 setCarrim([])
-             
             }
             const adicionar = (y) => {
                 carrim.push(y);
             }
 
+            
             return(
                 <>
                 <div className="headComponent">
@@ -94,17 +104,19 @@ export default function ListaP (){
                 <div className="imagesCozinha">
                 
                 <div className="carroselItens" >
-                {imagesCozinha.map((item) => (
+                {novaLista.map((item) => (
                     <div className="ppp">
                     <>
                     <div   className="card">
-         {/* {item.disponivel ? 'Disponível' : 'Indisponível'}  */}
+     
                     
                     <img key={item.id} src={item.src} alt="Imagem" className="image" />
                     
                     <p>{item.title}</p>
+                  
                     
                     <MyButton  onClick={()=> adicionarItem(item) }  textoButton={"Presentear"}/>
+                    {/* <MyButton onClick={()=>{deleteItem(item)}} textoButton={"Deletar Item"}/> */}
                     
                     </div>                                
                     </>
@@ -113,8 +125,8 @@ export default function ListaP (){
                     </div>
                     </div>
                     
-                    
-                        <Carrinho dados={carrim}  atualiza  ={ atualizaState} />
+                        {/* passar função como prop     'remover={RemoveItemLista}' aqui no Carrinho */}
+                        <Carrinho dados={carrim}  atualiza={ atualizaState} test={deleteItem} />
                   
                     
                     

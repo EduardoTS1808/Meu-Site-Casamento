@@ -4,7 +4,9 @@ import './style.css'
 import Form from "../Form/Form";
 import MyButtonPresentiar from "../ButtonPresentiar/MyButton";
 
-const Carrinho = ( {dados , atualiza}) => {
+const Carrinho = ( {dados , atualiza, test}) => {
+    // chamar esse valor nos parametros acima ', remover'
+ 
     
     const count = dados.length;
     let quantidade;
@@ -19,25 +21,24 @@ const Carrinho = ( {dados , atualiza}) => {
     let namePresente = [];
     const titlePresent = (dados)=>{
         dados.forEach(( nome)=>{
-            namePresente.push(nome.title)
-            console.log(nome.title)})
+            namePresente.push(nome.title)})
         }
         const handleReload = () => {
             alert("Muito obrigado, estamos ansiosos pela sua presença!")
             window.scrollTo({top:0, behavior: "auto"});
-            window.location.reload();
+            // window.location.reload();
         };
-        
-        
-        
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
         }
-        
-   
-        
+        const propsRemoveLista = ()=>{
+            
+            test()
+        }
+        //envio  do nome, telefone e o nome do presente para a planilha.
         function onSubmit(event) {
             event.preventDefault()
+            limpaCarrim({dados});
             titlePresent(dados) ;
             fetch('https://api.sheetmonkey.io/form/e3Cb86mZekusHup5r5bA2H', {
             method: 'post',
@@ -46,7 +47,7 @@ const Carrinho = ( {dados , atualiza}) => {
                 'Content-Type':'application/json',
             },
             body: JSON.stringify( {nome:valorInput.name, telefone:valorInput.phone, presente:namePresente})
-        }).then(handleReload)
+        }).then(handleReload, propsRemoveLista)
         
     }
     
@@ -62,17 +63,15 @@ const Carrinho = ( {dados , atualiza}) => {
             <>
             <div className="cardCarrinho">
             <img key={image.id} src={image.src} alt="Imagem" className="imageCarrinho" />
-            <p>{image.title}</p>
-            
-            
+            <p>{image.title}  {image.disponivel ? "disponivel" : "não disponivel"}</p>
             </div>
-            
             </>
             ))}
             </div>
             <Form valorInput={valorInput}  setValorInput={setValorInput} />
             <div className="botoes">
             <MyButtonPresentiar  onClick={onSubmit}  textoButton={"Confirmar"}/>
+            {/* <MyButtonPresentiar onClick={()=>{propsRemoveLista()}} textoButton={"Deletar Item"}/> */}
             <MyButtonPresentiar onClick={ limpaCarrim} textoButton={"Limpar"} />
             </div>
             </div>
