@@ -107,16 +107,16 @@
     top: 0;
 }
 
-.content h5{
-    margin: 0;
+/* .content h5{
+    margin-bottom: .9rem;
     color: #000;
     font-size: 2rem;
     font-weight: 400;
-}
+} */
 
 .content p{
     color: #000;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     z-index: 1000;
