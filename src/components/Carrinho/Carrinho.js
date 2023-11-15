@@ -3,6 +3,7 @@ import './style.css'
 
 import Form from "../Form/Form";
 import MyButtonPresentiar from "../ButtonPresentiar/MyButton";
+import Image from '../carregar/imageCarregando'
 
 const Carrinho = ( {dados , atualiza}) => {
     // chamar esse valor nos parametros acima ', remover'
@@ -20,7 +21,7 @@ const Carrinho = ( {dados , atualiza}) => {
         phone: '',
     });
     // console.log(valorInput.name,valorInput.phone);
-
+    const [showcomponent, setShowcomponent] = useState(false)
     let namePresente = [];
 
          const titlePresent = (dados)=>{
@@ -28,20 +29,31 @@ const Carrinho = ( {dados , atualiza}) => {
             namePresente.push(nome.title)})
         }
        const handleReload = () => {
+                carregado();
                 alert("Muito obrigado, estamos ansiosos pela sua presença!")
                 window.scrollTo({top:0, behavior: "auto"});
+                window.location.reload();
          };
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
+             
           
         }
+      const carregando = () =>{
+       setShowcomponent(true)
+      }
+      function carregado() {
+       setShowcomponent(false)
+      }
       
-                //envio  do nome, telefone e o nome do presente para a planilha.
-
-                function onSubmit(event) {
-                    event.preventDefault()
+      //envio  do nome, telefone e o nome do presente para a planilha.
+      
+      function onSubmit(event) {
+          event.preventDefault()
+                    carregando();
                     limpaCarrim({dados});
                     titlePresent(dados) ;
+                   
                     fetch('https://api.sheetmonkey.io/form/e3Cb86mZekusHup5r5bA2H', {
                     method: 'post',
                     headers: {
@@ -49,7 +61,7 @@ const Carrinho = ( {dados , atualiza}) => {
                         'Content-Type':'application/json',
                     },
                     body: JSON.stringify( {nome:valorInput.name, telefone:valorInput.phone, presente:namePresente})
-                }).then(  handleReload )
+                }).then( handleReload )
                 
             }
     
@@ -63,6 +75,7 @@ const Carrinho = ( {dados , atualiza}) => {
         <div className="carrinho" >
         {dados.map((image) => (
             <>
+            {}
             <div className="cardCarrinho">
             <img key={image.id} src={image.src} alt="Imagem" className="imageCarrinho" />
             <p>{image.title} </p>
@@ -70,9 +83,10 @@ const Carrinho = ( {dados , atualiza}) => {
             </>
             ))}
             </div>
+           {showcomponent && <Image/>}
             <Form valorInput={valorInput}  setValorInput={setValorInput} />
             <div className="botoes">
-           {(valorInput.name === "" || valorInput.phone === "") ? (<MyButtonPresentiar  onClick={() => alert(" Preencha os campos vazios")}  textoButton={"Confirmar"}/>) :  (  <MyButtonPresentiar  onClick={onSubmit}  textoButton={"Confirmar"}/>) }
+           {(valorInput.name === "" || valorInput.phone === "" || dados.image === "") ? (<MyButtonPresentiar  onClick={() => alert(" Preencha os campos vazios")}  textoButton={"Confirmar"}/>) :  (  <MyButtonPresentiar  onClick={onSubmit}  textoButton={"Confirmar"}/>) }
            
 
            

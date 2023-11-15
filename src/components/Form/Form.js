@@ -1,6 +1,5 @@
 import React from "react";
 import { IMaskInput} from 'react-imask';
-// import input from 'react-input-mask';
 
  export default function Form ({valorInput, setValorInput}){
     const FormStyle = {
@@ -22,7 +21,9 @@ import { IMaskInput} from 'react-imask';
         padding: " 0 17px",
         fontSize: "15px"
     }
-   
+
+    
+  
     const handleInputChange = (e) => {
       setValorInput({
         ...valorInput,
@@ -41,8 +42,9 @@ import { IMaskInput} from 'react-imask';
 
 
     return(
-          <form  style={FormStyle} >
+      <form  style={FormStyle} >
           
+            
             <label style={label}>Digite seu nome</label>
             <input 
             name="nome" 

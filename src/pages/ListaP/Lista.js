@@ -12,7 +12,8 @@ export default function ListaP (){
     
  
 
-            const port = 'https://back-end-site-casamento-hljy.vercel.app/lista';
+            // const port = 'https://back-end-site-casamento-hljy.vercel.app/lista';
+            const port = 'http://localhost:3002/lista';
 
                     
             const [lista, setLista] = useState([])
@@ -52,9 +53,14 @@ export default function ListaP (){
             }
 
             useEffect(()=>{
-                serverLista();
-           
+             
+                serverLista()
+                
             }, [])
+            // useEffect(()=>{
+            //      window.location.reload();
+           
+            // }, [setObjeto])
          
               
             
