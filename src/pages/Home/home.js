@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ImageHome from '../../assets/imagens/principal.jpg'
+import ImageHome from '../../assets/imagens/principalHD.jpg'
 import Countdown from '../../components/Contador/CountDown';
 
 
