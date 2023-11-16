@@ -35,7 +35,7 @@ const Carrinho = ( {dados , atualiza}) => {
                 carregado();
                 alert("Muito obrigado, estamos ansiosos pela sua presença!")
                 window.scrollTo({top:0, behavior: "auto"});
-                reload();
+                reloading();
          };
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
