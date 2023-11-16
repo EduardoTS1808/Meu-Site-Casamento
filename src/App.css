@@ -10,15 +10,6 @@
 
 
 
-
-
-@media(max-width: 550px){
-  *{
-    font-size: 50%;
-    margin: 0;
-    padding: 0;
-  }
-}
 @media(max-width: 200px){
   *{
     font-size: 40%;
