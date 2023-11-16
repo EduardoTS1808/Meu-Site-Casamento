@@ -21,7 +21,8 @@ export default function ListaP (){
           
 
 const serverLista = async () =>{
-            const {data} = await axios.get(port);
+const timestamp = Data.now();
+            const {data} = await axios.get(`${port}?timestamp=${timestamp}`);
                 setObjeto(data)
             }
 
