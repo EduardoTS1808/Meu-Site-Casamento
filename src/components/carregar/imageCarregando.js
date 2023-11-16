@@ -5,7 +5,7 @@ import  image from './pngwing.com.png'
 export default function imageReload  () {
 
     return(
-        <div className="imageRe" ><img src={image}/></div>
+        <div className="imageRe" ><img src={image} alt="imagem" /></div>
     )
 
  }
