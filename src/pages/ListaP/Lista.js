@@ -18,7 +18,7 @@ export default function ListaP (){
                     
             const [lista, setLista] = useState([])
             const [objeto, setObjeto] = useState([])
-          useEffect (()=>{
+          
 
 const serverLista = async () =>{
             const {data} = await axios.get(port);
@@ -27,8 +27,6 @@ const serverLista = async () =>{
 
 window.location.reload()
 
-
-},[setObjeto])
             
            
 
@@ -60,10 +58,11 @@ window.location.reload()
             }
 
             
-            // useEffect(()=>{
-            //      window.location.reload();
+             useEffect(()=>{
+              serverLista()
+               //  window.location.reload();
            
-            // }, [setObjeto])
+            }, [])
          
               
             
