@@ -25,8 +25,10 @@ const serverLista = async () =>{
                 setObjeto(data)
             }
 
+window.location.reload()
 
-},[])
+
+},[setObjeto])
             
            
 
