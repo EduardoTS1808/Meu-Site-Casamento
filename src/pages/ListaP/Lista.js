@@ -18,11 +18,16 @@ export default function ListaP (){
                     
             const [lista, setLista] = useState([])
             const [objeto, setObjeto] = useState([])
+          useEffect (()=>{
 
-            const serverLista = async () =>{
+const serverLista = async () =>{
             const {data} = await axios.get(port);
                 setObjeto(data)
             }
+
+
+},[])
+            
            
 
             const removerItem =  async (item) =>{
@@ -52,11 +57,7 @@ export default function ListaP (){
                 carrim.push(y);
             }
 
-            useEffect(()=>{
-             
-                serverLista()
-                
-            }, [])
+            
             // useEffect(()=>{
             //      window.location.reload();
            
