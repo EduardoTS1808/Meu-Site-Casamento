@@ -86,7 +86,7 @@ const Carrinho = ( {dados , atualiza}) => {
            {showcomponent && <Image/>}
             <Form valorInput={valorInput}  setValorInput={setValorInput} />
             <div className="botoes">
-           {(valorInput.name === "" || valorInput.phone === "" || dados.image === "") ? (<MyButtonPresentiar  onClick={() => alert(" Preencha os campos vazios")}  textoButton={"Confirmar"}/>) :  (  <MyButtonPresentiar  onClick={onSubmit}  textoButton={"Confirmar"}/>) }
+           {(valorInput.name === "" || valorInput.phone === "" || quantidade === undefined) ? (<MyButtonPresentiar  onClick={() => alert(" Preencha os campos vazios")}  textoButton={"Confirmar"}/>) :  (  <MyButtonPresentiar  onClick={onSubmit}  textoButton={"Confirmar"}/>) }
            
 
            
