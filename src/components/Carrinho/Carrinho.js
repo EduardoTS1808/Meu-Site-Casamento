@@ -38,6 +38,7 @@ const Carrinho = ( {dados , atualiza}) => {
                 window.scrollTo({top:0, behavior: "auto"});
 
                 reloading();
+ }
 
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
