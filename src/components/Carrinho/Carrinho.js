@@ -44,9 +44,7 @@ const Carrinho = ( {dados , atualiza}) => {
              
           
         }
-        const reloading = async () =>{
-            window.location.reload()
-        }
+        
       const carregando = () =>{
        setShowcomponent(true)
       }
