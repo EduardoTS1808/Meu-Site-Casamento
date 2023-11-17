@@ -36,12 +36,9 @@ const Carrinho = ( {dados , atualiza}) => {
                 carregado();
                 alert("Muito obrigado, estamos ansiosos pela sua presença!")
                 window.scrollTo({top:0, behavior: "auto"});
-<<<<<<< HEAD
-                reload();
-=======
+
                 reloading();
->>>>>>> a8ee189964c9d41bfd674a5ea0dd427ec9932b2d
-         };
+
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
              
@@ -111,7 +108,7 @@ const Carrinho = ( {dados , atualiza}) => {
         
         
         
-        export default  Carrinho 
         
-        
+    }
+    export default  Carrinho 
         
