@@ -7,6 +7,9 @@ import Image from '../carregar/imageCarregando'
 
 const Carrinho = ( {dados , atualiza}) => {
     // chamar esse valor nos parametros acima ', remover'
+   const reloading = async () =>{
+   window.location.reload();
+}
  
 
     const count = dados.length;
@@ -33,7 +36,11 @@ const Carrinho = ( {dados , atualiza}) => {
                 carregado();
                 alert("Muito obrigado, estamos ansiosos pela sua presença!")
                 window.scrollTo({top:0, behavior: "auto"});
+<<<<<<< HEAD
                 reload();
+=======
+                reloading();
+>>>>>>> a8ee189964c9d41bfd674a5ea0dd427ec9932b2d
          };
         const limpaCarrim = ({dados})=>{
             atualiza(dados)

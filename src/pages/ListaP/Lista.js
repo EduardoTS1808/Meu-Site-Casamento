@@ -18,7 +18,9 @@ export default function ListaP (){
                     
             const [lista, setLista] = useState([])
             const [objeto, setObjeto] = useState([])
+          
 
+<<<<<<< HEAD
             const serverLista = async () =>{
                 const timestamp = Date.now(); 
            try{
@@ -29,6 +31,19 @@ export default function ListaP (){
            }
             }
             
+=======
+const serverLista = async () =>{
+const timestamp = Date.now();
+            const {data} = await axios.get(`${port}?timestamp=${timestamp}`);
+                setObjeto(data)
+            }
+
+
+
+            
+           
+
+>>>>>>> a8ee189964c9d41bfd674a5ea0dd427ec9932b2d
             const removerItem =  async (item) =>{
                 await axios.delete(`${port}/${item.id}`);
                 setObjeto(objeto.filter((iten)=> iten.id !== item.id))
@@ -61,12 +76,21 @@ export default function ListaP (){
                 carrim.push(y);
             }
 
+<<<<<<< HEAD
             useEffect(()=>{
              
                 serverLista()
                 
             }, [])
           
+=======
+            
+             useEffect(()=>{
+              serverLista()
+               //  window.location.reload();
+           
+            }, [])
+>>>>>>> a8ee189964c9d41bfd674a5ea0dd427ec9932b2d
          
               
             

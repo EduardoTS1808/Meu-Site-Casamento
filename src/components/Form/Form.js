@@ -63,7 +63,7 @@ import { IMaskInput} from 'react-imask';
                 value={valorInput.phone}
                  onChange={handleInputChange2}
                  mask="(00) 0 0000-0000"
-                  placeholder="digite seu telefone"
+                  placeholder="(85) 9 9123-4567"
                   />
                  
           </form>
