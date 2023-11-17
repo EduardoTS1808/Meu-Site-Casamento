@@ -33,12 +33,15 @@ const Carrinho = ( {dados , atualiza}) => {
                 carregado();
                 alert("Muito obrigado, estamos ansiosos pela sua presença!")
                 window.scrollTo({top:0, behavior: "auto"});
-                window.location.reload();
+                reload();
          };
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
              
           
+        }
+        const reload = async () =>{
+            window.location.reload()
         }
       const carregando = () =>{
        setShowcomponent(true)
@@ -54,6 +57,7 @@ const Carrinho = ( {dados , atualiza}) => {
                     carregando();
                     limpaCarrim({dados});
                     titlePresent(dados) ;
+                    
                    
                     fetch('https://api.sheetmonkey.io/form/e3Cb86mZekusHup5r5bA2H', {
                     method: 'post',

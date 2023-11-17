@@ -12,25 +12,34 @@ export default function ListaP (){
     
  
 
-            const port = 'https://back-end-site-casamento-hljy.vercel.app/lista';
-            // const port = 'http://localhost:3002/lista';
+            // const port = 'https://back-end-site-casamento-hljy.vercel.app/lista';
+            const port = 'http://localhost:3002/lista';
 
                     
             const [lista, setLista] = useState([])
             const [objeto, setObjeto] = useState([])
 
             const serverLista = async () =>{
-            const {data} = await axios.get(port);
-                setObjeto(data)
+                const timestamp = Date.now(); 
+           try{
+            const {data} = await axios.get(`${port}?timestamp=${timestamp}`);
+            setObjeto(data)
+           } catch (error) {
+                console.log(error)
+           }
             }
-           
-
+            
             const removerItem =  async (item) =>{
-            await axios.delete(`${port}/${item.id}`);
-            setObjeto(objeto.filter((iten)=> iten.id !== item.id))
-
-            console.log(item,"deletado com sucesso");
+                await axios.delete(`${port}/${item.id}`);
+                setObjeto(objeto.filter((iten)=> iten.id !== item.id))
+                
+                console.log(item,"deletado com sucesso");
+                
             }
+            useEffect(()=>{
+                serverLista()
+            
+            }, [])
 
 
               
@@ -57,10 +66,7 @@ export default function ListaP (){
                 serverLista()
                 
             }, [])
-            // useEffect(()=>{
-            //      window.location.reload();
-           
-            // }, [setObjeto])
+          
          
               
             
