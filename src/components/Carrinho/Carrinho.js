@@ -38,15 +38,14 @@ const Carrinho = ( {dados , atualiza}) => {
                 window.scrollTo({top:0, behavior: "auto"});
 
                 reloading();
+                }
 
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
              
           
         }
-        const reload = async () =>{
-            window.location.reload()
-        }
+       
       const carregando = () =>{
        setShowcomponent(true)
       }
@@ -104,11 +103,11 @@ const Carrinho = ( {dados , atualiza}) => {
             </div>
             );
             
-        };
+};
         
         
         
         
-    }
+    
     export default  Carrinho 
         
