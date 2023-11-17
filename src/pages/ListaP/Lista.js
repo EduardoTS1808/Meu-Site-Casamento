@@ -12,8 +12,7 @@ export default function ListaP (){
     
  
 
-            // const port = 'https://back-end-site-casamento-hljy.vercel.app/lista';
-            const port = 'http://localhost:3002/lista';
+            const port = 'https://back-end-site-casamento-hljy.vercel.app/lista';
 
                     
             const [lista, setLista] = useState([])
