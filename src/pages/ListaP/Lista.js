@@ -39,10 +39,7 @@ export default function ListaP (){
                 console.log(item,"deletado com sucesso");
                 
             }
-            useEffect(()=>{
-                serverLista()
-            
-            }, [])
+      
 
 
               
