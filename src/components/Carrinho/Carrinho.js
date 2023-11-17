@@ -5,7 +5,7 @@ import Form from "../Form/Form";
 import MyButtonPresentiar from "../ButtonPresentiar/MyButton";
 import Image from '../carregar/imageCarregando'
 
-const Carrinho = ( {dados , atualiza}) => {
+export default function Carrinho ( {dados , atualiza}) {
     // chamar esse valor nos parametros acima ', remover'
    const reloading = async () =>{
    window.location.reload();
@@ -38,14 +38,14 @@ const Carrinho = ( {dados , atualiza}) => {
                 window.scrollTo({top:0, behavior: "auto"});
 
                 reloading();
-                }
+        }
 
         const limpaCarrim = ({dados})=>{
             atualiza(dados)
              
           
         }
-       
+
       const carregando = () =>{
        setShowcomponent(true)
       }
@@ -106,8 +106,8 @@ const Carrinho = ( {dados , atualiza}) => {
 };
         
         
-        
+    
         
     
-    export default  Carrinho 
+
         
